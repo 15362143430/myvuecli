@@ -9,3 +9,5 @@ new Vue({
     },
     template: '<App/>'
 })
+let linsanxin = 1;
+console.log(linsanxin)
