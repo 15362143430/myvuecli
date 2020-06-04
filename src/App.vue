@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import img from './asset/images/haha.jpg';
 export default {
   name: "App"
 };
