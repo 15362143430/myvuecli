@@ -1,5 +1,4 @@
 body
     text-align: center;
-    transform: translateX(-1%)
 .ll
     color: #fff
