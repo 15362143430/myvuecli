@@ -19,6 +19,8 @@
         "css-loader": "^3.5.3",
         "file-loader": "^6.0.0",
         "html-webpack-plugin": "^4.3.0",
+        "less": "^3.11.3",
+        "less-loader": "^6.1.1",
         "lsx-npm": "^1.0.0",
         "postcss-loader": "^3.0.0",
         "style-loader": "^1.2.1",
