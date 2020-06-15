@@ -33,12 +33,8 @@
       <l-button type="danger" plain round>危险按钮</l-button>
     </div>
     <div class="l-row">
-      <l-button circle>默</l-button>
-      <l-button type="primary" plain circle></l-button>
-      <l-button type="success" plain circle></l-button>
-      <l-button type="info" plain circle></l-button>
-      <l-button type="warning" plain circle></l-button>
-      <l-button type="danger" plain circle></l-button>
+      <l-button circle icon='l-icon-search'></l-button>
+      <l-button type="primary" plain circle  icon='l-icon-share'></l-button>
     </div>
     <div class="l-row">
       <l-button disabled>默认按钮</l-button>
