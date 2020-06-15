@@ -39,15 +39,29 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'stylus-loader']
             },
             {
+                test: /\.less$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+            },
+            {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
             {
+<<<<<<< HEAD
                 test: /\.js$/,
                 loader: 'eslint-loader',
                 exclude: /node_modules/,
                 options: {}
+=======
+                test:/.(woff|woff2|eot|ttf|otf|TTF)/,
+                use:{
+                        loader:"url-loader",
+                        options:{
+                                   limit:10240 //不超过10K时，将其转化为base64
+                               }
+                      }
+>>>>>>> b9b3de949c6fdfb754e42df467776be75f2de513
             }
         ]
     },
@@ -62,6 +76,7 @@ module.exports = {
     resolve: {
         alias: {
             'vue': 'vue/dist/vue.js'
-        }
+        },
+        extensions:['.js','.json','.css','.vue']
     }
 }

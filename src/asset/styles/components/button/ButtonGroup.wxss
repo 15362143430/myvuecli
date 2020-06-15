@@ -1,0 +1,27 @@
+.l-button-group {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.l-button-group > .el-button {
+  float: left;
+  position: relative;
+}
+.l-button-group > .l-button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.l-button-group > .l-button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.l-button-group > .l-button + .l-button {
+  margin-left: 0;
+}
+.l-button-group > .l-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.l-button-group .l-button--primary:not(:first-child):not(:last-child) {
+  border-left-color: rgba(255, 255, 255, 0.5);
+  border-right-color: rgba(255, 255, 255, 0.5);
+}
