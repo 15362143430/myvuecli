@@ -48,20 +48,19 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-<<<<<<< HEAD
                 test: /\.js$/,
                 loader: 'eslint-loader',
                 exclude: /node_modules/,
                 options: {}
-=======
-                test:/.(woff|woff2|eot|ttf|otf|TTF)/,
-                use:{
-                        loader:"url-loader",
-                        options:{
-                                   limit:10240 //不超过10K时，将其转化为base64
-                               }
-                      }
->>>>>>> b9b3de949c6fdfb754e42df467776be75f2de513
+            },
+            {
+                test: /.(woff|woff2|eot|ttf|otf|TTF)/,
+                use: {
+                    loader: "url-loader",
+                    options: {
+                        limit: 10240 //不超过10K时，将其转化为base64
+                    }
+                }
             }
         ]
     },
@@ -77,6 +76,6 @@ module.exports = {
         alias: {
             'vue': 'vue/dist/vue.js'
         },
-        extensions:['.js','.json','.css','.vue']
+        extensions: ['.js', '.json', '.css', '.vue']
     }
 }
