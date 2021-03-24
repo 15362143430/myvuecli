@@ -27,11 +27,14 @@
         "less": "^3.11.3",
         "less-loader": "^6.1.1",
         "lsx-npm": "^1.0.0",
+        "node-sass": "^4.13.1",
         "postcss-loader": "^3.0.0",
+        "sass-loader": "^10.0.2",
         "style-loader": "^1.2.1",
         "stylus": "^0.54.7",
         "stylus-loader": "^3.0.2",
         "url-loader": "^4.1.0",
+        "vue-loader": "^15.9.6",
         "vue-router": "^3.3.2",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11",
@@ -39,8 +42,8 @@
         "webpack-merge": "^4.2.2"
     },
     "dependencies": {
+        "extract-text-webpack-plugin": "^3.0.2",
         "vue": "^2.6.11",
-        "vue-loader": "^15.9.2",
         "vue-template-compiler": "^2.6.11"
     },
     "eslintConfig": {

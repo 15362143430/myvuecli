@@ -1,0 +1,28 @@
+.c-row {
+    // width: 100%
+    box-sizing: border-box;
+}
+
+.c-row-flex {
+    display: flex;
+}
+
+.is-justify-end {
+    justify-content: flex-end;
+}
+
+.is-justify-space-around {
+    justify-content: space-around;
+}
+
+.is-justify-space-between {
+    justify-content: space-between;
+}
+
+.is-align-middle {
+    align-items: center;
+}
+
+.is-align-bottom {
+    align-items: flex-end;
+}

@@ -1,132 +1,82 @@
 <template>
-  <div class="demo-button">
-    <div class="l-row">
-      <l-button>默认按钮</l-button>
-      <l-button type="primary">主要按钮</l-button>
-      <l-button type="success">成功按钮</l-button>
-      <l-button type="info">信息按钮</l-button>
-      <l-button type="warning">警告按钮</l-button>
-      <l-button type="danger">危险按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button plain>默认按钮</l-button>
-      <l-button type="primary" plain>主要按钮</l-button>
-      <l-button type="success" plain>成功按钮</l-button>
-      <l-button type="info" plain>信息按钮</l-button>
-      <l-button type="warning" plain>警告按钮</l-button>
-      <l-button type="danger" plain>危险按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button round>默认按钮</l-button>
-      <l-button type="primary" round>主要按钮</l-button>
-      <l-button type="success" round>成功按钮</l-button>
-      <l-button type="info" round>信息按钮</l-button>
-      <l-button type="warning" round>警告按钮</l-button>
-      <l-button type="danger" round>危险按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button round>默认按钮</l-button>
-      <l-button type="primary" plain round>主要按钮</l-button>
-      <l-button type="success" plain round>成功按钮</l-button>
-      <l-button type="info" plain round>信息按钮</l-button>
-      <l-button type="warning" plain round>警告按钮</l-button>
-      <l-button type="danger" plain round>危险按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button circle icon='l-icon-search'></l-button>
-      <l-button type="primary" plain circle  icon='l-icon-share'></l-button>
-    </div>
-    <div class="l-row">
-      <l-button disabled>默认按钮</l-button>
-      <l-button type="primary" disabled>主要按钮</l-button>
-      <l-button type="success" disabled>成功按钮</l-button>
-      <l-button type="info" disabled>信息按钮</l-button>
-      <l-button type="warning" disabled>警告按钮</l-button>
-      <l-button type="danger" disabled>危险按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button plain disabled>默认按钮</l-button>
-      <l-button type="primary" plain disabled>主要按钮</l-button>
-      <l-button type="success" plain disabled>成功按钮</l-button>
-      <l-button type="info" plain disabled>信息按钮</l-button>
-      <l-button type="warning" plain disabled>警告按钮</l-button>
-      <l-button type="danger" plain disabled>危险按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button type='text'>默认按钮</l-button>
-      <l-button type='text' disabled>默认按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button-group>
-        <l-button icon='l-icon-arrow-left' type="primary">上一页</l-button>
-        <l-button type="primary">下一页<i class="l-icon-arrow-right l-icon--right"></i></l-button>
-      </l-button-group>
-      <l-button-group>
-        <l-button type="primary">主要按钮</l-button>
-        <l-button type="info">信息按钮</l-button>
-        <l-button type="success">成功按钮</l-button>
-      </l-button-group>
-    </div>
-    <div class="l-row">
-      <l-button loading>默认按钮</l-button>
-      <l-button type='primary' loading>默认按钮</l-button>
-      <l-button type='primary' loading plain>默认按钮</l-button>
-    </div>
-    <div class="l-row">
-      <l-button>默认按钮</l-button>
-      <l-button size='medium'>默认按钮</l-button>
-      <l-button size=small>默认按钮</l-button>
-      <l-button size='mini'>默认按钮</l-button>
+  <div id="app">
+    <div class="demo-container">
+      <c-container>
+        <c-header>sss</c-header>
+      </c-container>
     </div>
   </div>
 </template>
 
 <script>
-import img from "./asset/images/haha.jpg";
-import "./asset/styles/test.css";
-import "./asset/styles/global.stylus";
-import LButton from "./components/button/src/Button";
-import LButtonGroup from './components/button/src/ButtonGroup'
-// import Button
 export default {
-  name: "App",
-  components: {
-    LButton,
-    LButtonGroup
-  },
-  created() {
-    console.log(img);
+  name: 'App',
+  components: {},
+  created() {},
+  mounted () {
+    console.log(this.$slots)
   },
   data() {
     return {
-      list: [
-        { name: "lin" },
-        { name: "lin" },
-        { name: "lin" },
-        { name: "lin" },
-        { name: "lin" }
-      ]
-    };
+      num: 0,
+    }
   },
   methods: {
     add() {
-      this.list.push({ name: "k" });
-    }
-  }
-};
+      this.num += 1
+    },
+    // doubleNum () {
+    //   return this.num * 2
+    // }
+  },
+  computed: {
+    doubleNum() {
+      return this.num * 2
+    },
+  },
+}
 </script>
 
-<style lang='less'>
-div {
-  #a {
-    font-size: 30px;
+<style lang='scss'>
+// @import './asset/styles/rem.sass';
+#app {
+  font-family: 'Avenir', Hcvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothings: grayscale;
+  color: #2c3e50;
+  // margin-top: 60px;
+}
+ .c-header, .c-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
   }
-}
-
-.demo-box.demo-button .l-button + .l-button {
-  margin-left: 10px;
-}
-.l-row{
-  margin-bottom: 20px;
-}
+  
+  .c-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .c-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 160px;
+  }
+  
+  body > .c-container {
+    margin-bottom: 40px;
+  }
+  
+  .c-container:nth-child(5) .c-aside,
+  .c-container:nth-child(6) .c-aside {
+    line-height: 260px;
+  }
+  
+  .c-container:nth-child(7) .c-aside {
+    line-height: 320px;
+  }
 </style>
