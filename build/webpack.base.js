@@ -84,7 +84,9 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            'vue': 'vue/dist/vue.js'
+            'vue': 'vue/dist/vue.js',
+            'common': '~/package/style/common',
+            'mixins': '~/package/style/mixins',
         },
         extensions: ['.js', '.json', '.css', '.vue']
     }
