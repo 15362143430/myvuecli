@@ -1,6 +1,6 @@
 <template>
     <header class="c-header" :style="{ height }">
-
+        <slot></slot>
     </header>
 </template>
 

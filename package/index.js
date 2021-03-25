@@ -5,6 +5,9 @@ import CRow from './row/index.js'
 import CCol from './col/index.js'
 import CContainer from './container/index.js'
 import CHeader from './header/index.js'
+import CFooter from './footer/index.js'
+import CAside from './aside/index.js'
+import CMain from './main/index.js'
 export {
     CButton,
     CButtonGroup,
@@ -12,5 +15,8 @@ export {
     CRow,
     CCol,
     CContainer,
-    CHeader
+    CHeader,
+    CFooter,
+    CAside,
+    CMain
 }
