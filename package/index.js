@@ -8,6 +8,7 @@ import CHeader from './header/index.js'
 import CFooter from './footer/index.js'
 import CAside from './aside/index.js'
 import CMain from './main/index.js'
+import CBacktop from './backtop/index'
 export {
     CButton,
     CButtonGroup,
@@ -18,5 +19,6 @@ export {
     CHeader,
     CFooter,
     CAside,
-    CMain
+    CMain,
+    CBacktop
 }

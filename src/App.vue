@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="demo-container">
-      
+      <c-tag />
     </div>
   </div>
 </template>
