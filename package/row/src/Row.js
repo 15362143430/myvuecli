@@ -1,35 +1,29 @@
-{/* <template>
-  <div class="c-row" :style="getRowGutterStyle" :class="getRowFlexClass">
-    <slot></slot>
-  </div>
-</template> */}
-
 export default {
   name: 'CRow',
   props: {
-    gutter: {
+    gutter: { // 栅格间隔
       type: Number,
       default: 0,
     },
-    type: String,
-    justify: {
+    type: String, // 布局模式，可选flex，现代浏览器下有效
+    justify: { // flex布局下的水平排列方式
       type: String,
       default: 'start',
     },
-    align: {
+    align: { // flex布局下的垂直排列方式
       type: String,
       default: 'top',
     },
-    tag: {
+    tag: { // 自定义元素标签（涉及到vue的render函数里的createElement）
       type: String,
-      default: 'div',
+      default: 'div', // 默认是div标签
     },
   },
   created() {
-    console.log(this.$slots, this.$slots.default.length, 'slots')
+    console.log(this.$slots, this.$slots.default.length, 'slots') // 想看看$slot长啥样，你们可以忽略
   },
   computed: {
-    getRowGutterStyle() {
+    getRowGutterStyle() { // 计算左右margin，配合gutter计算
       if (this.gutter === 0) return ''
       const value = this.gutter / 2 + 'px'
       return {
@@ -37,7 +31,7 @@ export default {
         marginRight: value,
       }
     },
-    getRowFlexClass() {
+    getRowFlexClass() { // 计算出flex布局的class是哪些
       return [
         { 'c-row-flex': this.type === 'flex' },
         this.justify === 'start' ? '' : `is-justify-${this.justify}`,
@@ -45,8 +39,8 @@ export default {
       ]
     },
   },
-  render: function (createElement) {
-    return createElement(this.tag, {
+  render: function (createElement) { // 渲染dom的函数render
+    return createElement(this.tag, { // 利用createElement创建dom
       class: [
         'c-row',
         { 'c-row-flex': this.type === 'flex' },
@@ -57,7 +51,3 @@ export default {
     }, this.$slots.default)
   },
 }
-
-{/* <style lang="scss">
-@import '../../../asset/styles/components/row/Row.sass';
-</style> */}
