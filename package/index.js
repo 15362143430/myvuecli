@@ -9,6 +9,7 @@ import CFooter from './footer/index.js'
 import CAside from './aside/index.js'
 import CMain from './main/index.js'
 import CBacktop from './backtop/index'
+import CCard from './CCard/index'
 export {
     CButton,
     CButtonGroup,
@@ -20,5 +21,6 @@ export {
     CFooter,
     CAside,
     CMain,
-    CBacktop
+    CBacktop,
+    CCard
 }
